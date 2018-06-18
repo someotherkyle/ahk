@@ -1,4 +1,4 @@
-#IfWinActive Elite - Dangerous (CLIENT)
+﻿#IfWinActive Elite - Dangerous (CLIENT)
 
 3joy14::
 Send, {Down}
@@ -35,8 +35,6 @@ Sleep, 10
 Send, {Up 6}
 Sleep, 10
 Return 
-
-#IfWinActive
 
 #IfWinActive Realm Grinder
 #MaxThreadsPerHotkey 3
@@ -81,6 +79,18 @@ Sleep, 500
 Return
 
 #IfWinActive WARFRAME
+#MaxThreadsPerHotkey 3
+
+^2::
+Toggle := !Toggle
+Loop
+{
+	If (!Toggle)
+		Break
+	Send, 2
+	Sleep 500 ; Make this number higher for slower clicks, lower for faster.
+}
+Return
 
 XButton1::
 Send, {c down}e{c up}
